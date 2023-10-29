@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Connexion</h2>
+    {% comment %} <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" >Se connecter</button>
+    </form> {% endcomment %}
+    <form method="post">
+  
+  <p>
+    <label for="id_username">Username:</label>
+    <input type="text" name="username" value="" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+    
+    
+  </p>
+
+  
+  <p>
+    <label for="id_password">Password:</label>
+    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+    
+    
+      
+    
+  </p>
+        {% csrf_token %}
+        <button type="submit">Se connecter</button>
+    </form>
+{% endblock content %}
